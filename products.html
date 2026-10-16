@@ -17,35 +17,60 @@
     }
     .product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.12); }
     .product-img { width: 100%; height: 170px; object-fit: contain; background: #f8fafc; padding: 12px; }
+    .overflow-x-auto::-webkit-scrollbar {
+  display: none;
+}
+.overflow-x-auto {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 15s linear infinite;
+}
+#searchOverlay {
+  transition: opacity 0.2s ease-in-out;
+}
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
   <!-- Top Bar -->
-  <div class="bg-teal-800 text-white text-sm py-2">
-    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
-      <div class="flex gap-4">
-        <span><i class="fas fa-map-marker-alt mr-1"></i> Butwal, Nepal</span>
-        <span class="hidden sm:inline"><i class="fas fa-phone mr-1"></i> +977 9867187555</span>
-      </div>
-      <div class="flex gap-2">
-        <button onclick="setLang('en')" id="btn-en" class="px-3 py-1 rounded text-xs font-medium bg-teal-600">English</button>
-        <button onclick="setLang('ne')" id="btn-ne" class="px-3 py-1 rounded text-xs font-medium bg-teal-700">नेपाली</button>
-      </div>
+<div class="bg-[#C5A47E] text-white text-sm py-2">
+  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+    <div class="flex gap-4">
+      <span><i class="fas fa-map-marker-alt mr-1"></i> Butwal, Nepal</span>
+      <span class="hidden sm:inline"><i class="fas fa-phone mr-1"></i> +977 9867187555</span>
+    </div>
+    <div class="flex gap-2">
+      <button onclick="setLang('en')" id="btn-en" class="px-3 py-1 rounded text-xs font-medium bg-[#5C7283]">English</button>
+      <button onclick="setLang('ne')" id="btn-ne" class="px-3 py-1 rounded text-xs font-medium bg-[#5C7283]">नेपाली</button>
     </div>
   </div>
+</div>
 
   <!-- Nav -->
   <nav class="bg-white shadow-sm sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex justify-between items-center h-16">
-        <a href="index.html" class="flex items-center gap-2">
-          <img src="newlogo.png" alt="Sushko Logo" class="h-10 w-auto rounded-lg">
-          <div>
-            <div class="font-bold text-lg text-teal-900 leading-tight">SUSHKO PACKAGING</div>
-            <div class="text-xs text-gray-500 -mt-0.5">Packaging Solutions</div>
-          </div>
-        </a>
+        <!-- Logo + Search Group -->
+<div class="flex items-center gap-2">
+  <a href="index.html" class="flex items-center gap-2">
+    <img src="newlogo.png" alt="Sushko Logo" class="h-10 w-auto rounded-lg">
+    <div>
+      <div class="font-bold text-lg text-teal-900 leading-tight">SUSHKO PACKAGING</div>
+      <div class="text-xs text-gray-500 mt-0.5">Packaging Solutions</div>
+    </div>
+  </a>
+  <button onclick="toggleSearch()" class="text-gray-700 hover:text-teal-600 ml-2">
+    <i class="fas fa-search text-xl"></i>
+  </button>
+</div>
         <div class="hidden md:flex items-center gap-8">
           <a href="index.html" class="font-medium text-gray-600 hover:text-teal-700">Home</a>
           <a href="products.html" class="font-medium text-teal-700">Products</a>
@@ -66,11 +91,83 @@
     </div>
   </nav>
 
-  <!-- Header -->
-  <section class="bg-teal-800 text-white py-10">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-      <h1 class="text-3xl md:text-4xl font-bold mb-2">Product Catalogue</h1>
-      <p class="text-teal-100">Quality packaging for hotels, restaurants, shops & homes in Butwal</p>
+  <!-- TOP ANNOUNCEMENT BAR -->
+<div class="bg-[#C5A47E] text-white text-xs py-2 font-medium overflow-hidden">
+  <div class="animate-marquee">
+    🚚 FREE DELIVERY! Shop 1000+ Packaging & Hygiene Products &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🚚 FREE DELIVERY! Shop 1000+ Packaging & Hygiene Products &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </div>
+</div>
+
+<!-- MOVING HERO CAROUSEL -->
+<div class="max-w-7xl mx-auto px-4 mt-4">
+  <div class="relative w-full h-56 md:h-80 rounded-2xl overflow-hidden shadow-lg" id="heroCarousel">
+    
+    <!-- Slide 1 -->
+    <div class="absolute inset-0 transition-opacity duration-1000 opacity-100 z-10 slide-item">
+      <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200&auto=format&fit=crop" class="w-full h-full object-cover" alt="Offer 1">
+      <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent flex flex-col justify-center px-6">
+        <h2 class="text-white text-2xl md:text-4xl font-bold mb-1">Special Offers</h2>
+        <p class="text-gray-200 text-xs md:text-sm mb-4">Shop our best packaging deals</p>
+        <a href="#paper" class="bg-teal-500 hover:bg-teal-600 text-white px-5 py-2 rounded-lg font-semibold inline-block w-max text-sm shadow-md transition">SHOP NOW</a>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 z-0 slide-item">
+      <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=1200&auto=format&fit=crop" class="w-full h-full object-cover" alt="Offer 2">
+      <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent flex flex-col justify-center px-6">
+        <h2 class="text-white text-2xl md:text-4xl font-bold mb-1">Bulk Orders Welcome</h2>
+        <p class="text-gray-200 text-xs md:text-sm mb-4">Special rates for restaurants and hotels</p>
+        <a href="#bags" class="bg-amber-500 hover:bg-amber-600 text-white px-5 py-2 rounded-lg font-semibold inline-block w-max text-sm shadow-md transition">EXPLORE</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<!-- CATEGORY CIRCLES -->
+<div class="max-w-7xl mx-auto px-4 mt-6">
+  <h3 class="text-lg font-bold text-slate-700 mb-3">Shop by Category</h3>
+  <div class="flex overflow-x-auto gap-4 pb-2" style="scrollbar-width: none;">
+    
+    <a href="#paper" class="flex flex-col items-center min-w-[80px]">
+      <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-teal-50 border border-teal-100 flex items-center justify-center overflow-hidden mb-2 shadow-sm">
+        <i class="fas fa-box text-2xl text-teal-600"></i>
+      </div>
+      <span class="text-[10px] md:text-xs text-center text-gray-600 font-medium leading-tight">Paper<br>Products</span>
+    </a>
+
+    <a href="#plastic" class="flex flex-col items-center min-w-[80px]">
+      <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center overflow-hidden mb-2 shadow-sm">
+        <i class="fas fa-wine-bottle text-2xl text-blue-600"></i>
+      </div>
+      <span class="text-[10px] md:text-xs text-center text-gray-600 font-medium leading-tight">Plastic<br>Packaging</span>
+    </a>
+
+    <a href="#aluminum-foil-cling-film" class="flex flex-col items-center min-w-[80px]">
+      <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-amber-50 border border-amber-100 flex items-center justify-center overflow-hidden mb-2 shadow-sm">
+        <i class="fas fa-utensils text-2xl text-amber-600"></i>
+      </div>
+      <span class="text-[10px] md:text-xs text-center text-gray-600 font-medium leading-tight">Foil &<br>Cling Film</span>
+    </a>
+
+    <a href="#bags" class="flex flex-col items-center min-w-[80px]">
+      <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-green-50 border border-green-100 flex items-center justify-center overflow-hidden mb-2 shadow-sm">
+        <i class="fas fa-shopping-bag text-2xl text-green-600"></i>
+      </div>
+      <span class="text-[10px] md:text-xs text-center text-gray-600 font-medium leading-tight">Paper &<br>Garbage Bags</span>
+    </a>
+    
+    <a href="#napkin-tissue" class="flex flex-col items-center min-w-[80px]">
+      <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-purple-50 border border-purple-100 flex items-center justify-center overflow-hidden mb-2 shadow-sm">
+        <i class="fas fa-toilet-paper text-2xl text-purple-600"></i>
+      </div>
+      <span class="text-[10px] md:text-xs text-center text-gray-600 font-medium leading-tight">Napkin &<br>Tissue</span>
+    </a>
+
+  </div>
+</div>
     </div>
   </section>
 
@@ -91,7 +188,46 @@
 
   <section class="py-10">
     <div class="max-w-7xl mx-auto px-4 space-y-12 w-full">
+        
+      <!-- FULL SCREEN SEARCH OVERLAY -->
+<div id="searchOverlay" class="fixed inset-0 bg-white z-[999] flex-col" style="display: none;">
+  
+  <!-- Top Search Bar -->
+  <div class="p-4 border-b border-gray-200 flex items-center gap-3 bg-white">
+    <button onclick="toggleSearch()" class="text-gray-700 p-1">
+      <i class="fas fa-arrow-left text-xl"></i>
+    </button>
+    <input type="text" id="searchInput" placeholder="Search products..." class="flex-1 bg-gray-100 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-gray-800 text-sm">
+    <i class="fas fa-microphone text-gray-400 text-lg"></i>
+  </div>
 
+  <!-- Suggestions Area -->
+  <div class="p-4 flex-1 overflow-y-auto bg-white">
+    <h3 class="text-xs font-bold text-gray-500 mb-4 tracking-wider">POPULAR SUGGESTIONS</h3>
+    <ul class="space-y-4">
+      <li>
+        <a href="#" onclick="applySearch('foil')" class="flex items-center gap-3 text-gray-700 hover:text-teal-600 text-sm">
+          <i class="fas fa-search text-gray-400 text-xs"></i> Aluminum Foil
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="applySearch('paper bag')" class="flex items-center gap-3 text-gray-700 hover:text-teal-600 text-sm">
+          <i class="fas fa-search text-gray-400 text-xs"></i> Paper Bag
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="applySearch('spoon')" class="flex items-center gap-3 text-gray-700 hover:text-teal-600 text-sm">
+          <i class="fas fa-search text-gray-400 text-xs"></i> Spoon, Fork & Knife
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="applySearch('tissue')" class="flex items-center gap-3 text-gray-700 hover:text-teal-600 text-sm">
+          <i class="fas fa-search text-gray-400 text-xs"></i> Tissue & Napkin
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
       <!-- Paper -->
       <div id="paper">
         <h2 class="text-2xl font-bold mb-5 flex items-center gap-2"><i class="fas fa-box text-teal-600"></i> PAPER PRODUCTS</h2>
@@ -854,5 +990,118 @@
       });
     });
   </script>
+<!-- MOBILE BOTTOM NAVIGATION -->
+<div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 py-2 flex justify-around items-center z-50 md:hidden">
+  <a href="index.html" class="flex flex-col items-center text-teal-600">
+    <i class="fas fa-home text-lg"></i>
+    <span class="text-[10px] font-medium mt-1">Home</span>
+  </a>
+  <a href="#" onclick="toggleSearch()" class="flex flex-col items-center text-gray-500 hover:text-teal-600">
+    <i class="fas fa-search text-lg"></i>
+    <span class="text-[10px] font-medium mt-1">Search</span>
+  </a>
+  <a href="#paper" class="flex flex-col items-center text-gray-500 hover:text-teal-600">
+    <i class="fas fa-box-open text-lg"></i>
+    <span class="text-[10px] font-medium mt-1">Catalog</span>
+  </a>
+  <a href="contact.html" class="flex flex-col items-center text-gray-500 hover:text-teal-600">
+    <i class="fas fa-user text-lg"></i>
+    <span class="text-[10px] font-medium mt-1">Account</span>
+  </a>
+  <a href="https://wa.me/9779867187555" class="flex flex-col items-center text-gray-500 hover:text-teal-600 relative">
+    <i class="fas fa-shopping-cart text-lg"></i>
+    <span class="text-[10px] font-medium mt-1">Cart</span>
+    <span class="absolute -top-1 right-1 bg-red-500 text-white text-[8px] rounded-full w-4 h-4 flex items-center justify-center">0</span>
+  </a>
+</div>
+<script>
+  // Auto-sliding banner logic
+  document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.slide-item');
+    if (slides.length > 0) {
+      let currentSlide = 0;
+      
+      setInterval(() => {
+        // Hide current slide
+        slides[currentSlide].classList.remove('opacity-100', 'z-10');
+        slides[currentSlide].classList.add('opacity-0', 'z-0');
+        
+        // Move to next slide
+        currentSlide = (currentSlide + 1) % slides.length;
+        
+        // Show next slide
+        slides[currentSlide].classList.remove('opacity-0', 'z-0');
+        slides[currentSlide].classList.add('opacity-100', 'z-10');
+      }, 3000); // Changes slide every 3 seconds (3000ms)
+    }
+  });
+</script>
+<script>
+  // 1. Toggle the full screen overlay
+  function toggleSearch() {
+    const overlay = document.getElementById('searchOverlay');
+    const searchInput = document.getElementById('searchInput');
+    
+    if (overlay) {
+      // If it's already open, close it
+      if (overlay.style.display === 'flex') {
+        overlay.style.display = 'none';
+      } else {
+        // Open it and RESET the search
+        overlay.style.display = 'flex';
+        if (searchInput) {
+          searchInput.value = ''; // Clear old search
+          searchInput.dispatchEvent(new Event('input')); // Show all products again
+          searchInput.focus();
+        }
+      }
+    }
+  }
+
+  // 2. Apply search from a suggestion click
+  function applySearch(term) {
+    const searchInput = document.getElementById('searchInput');
+    const overlay = document.getElementById('searchOverlay');
+    
+    if (searchInput && overlay) {
+      searchInput.value = term;
+      searchInput.dispatchEvent(new Event('input')); // Filter products
+      overlay.style.display = 'none'; // Close overlay so you see results
+    }
+  }
+
+  // 3. Filter products as the user types
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('searchInput');
+    
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase().trim();
+        const sections = document.querySelectorAll('section > div > div[id]');
+        
+        sections.forEach(section => {
+          if (section.id === 'searchOverlay') return;
+          
+          const cards = section.querySelectorAll('.product-card');
+          let hasVisibleCard = false;
+          
+          cards.forEach(card => {
+            const title = card.querySelector('h3') ? card.querySelector('h3').textContent.toLowerCase() : '';
+            const desc = card.querySelector('p') ? card.querySelector('p').textContent.toLowerCase() : '';
+            
+            if (title.includes(searchTerm) || desc.includes(searchTerm)) {
+              card.style.display = ''; 
+              hasVisibleCard = true;
+            } else {
+              card.style.display = 'none'; 
+            }
+          });
+          
+          section.style.display = hasVisibleCard ? 'block' : 'none';
+        });
+      });
+    }
+  });
+</script>
 </body>
 </html>
