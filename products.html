@@ -71,8 +71,6 @@
     <div class="text-xs text-slate-500 mt-0.5">Packaging Solutions</div>
   </div>
 </a>
-  <button onclick="toggleSearch()" class="text-gray-700 hover:text-teal-600 ml-2">
-    <i class="fas fa-search text-xl"></i>
   </button>
 </div>
         <div class="hidden md:flex items-center gap-8">
@@ -170,6 +168,19 @@
       <span class="text-[10px] md:text-xs text-center text-gray-600 font-medium leading-tight">Napkin &<br>Tissue</span>
     </a>
 
+      <a href="#spoon-fork-knife" class="flex flex-col items-center min-w-[80px]">
+          <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-amber-50 border border-amber-100 flex items-center justify-center overflow-hidden mb-2 shadow-sm">
+            <i class="fas fa-utensils text-2xl text-amber-600"></i>
+          </div>
+          <span class="text-[10px] md:text-xs text-center text-gray-600 font-medium leading-tight">Spoon, Fork<br>& Knife</span>
+        </a>
+        
+   <a href="#hygiene" class="flex flex-col items-center min-w-[80px]">
+          <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-teal-50 border border-teal-100 flex items-center justify-center overflow-hidden mb-2 shadow-sm">
+            <i class="fas fa-pump-soap text-2xl text-teal-600"></i>
+          </div>
+          <span class="text-[10px] md:text-xs text-center text-gray-600 font-medium leading-tight">Hygiene &<br>Cleaning</span>
+        </a>
   </div>
 </div>
     </div>
@@ -187,51 +198,14 @@
       
            <a href="#spoon-fork-knife" class="px-4 py-1.5 rounded-full bg-gray-100">Spoon Fork and Knife</a>
            <a href="#gloves" class="px-4 py-1.5 rounded-full bg-gray-100">Gloves & Others</a>
+           <a href="#hygiene" class="px-4 py-1.5 rounded-full bg-gray-100">Hygiene & Cleaning</a>
     </div>
   </div>
 
   <section class="py-10">
     <div class="max-w-7xl mx-auto px-4 space-y-12 w-full">
         
-      <!-- FULL SCREEN SEARCH OVERLAY -->
-<div id="searchOverlay" class="fixed inset-0 bg-white z-[999] flex-col" style="display: none;">
-  
-  <!-- Top Search Bar -->
-  <div class="p-4 border-b border-gray-200 flex items-center gap-3 bg-white">
-    <button onclick="toggleSearch()" class="text-gray-700 p-1">
-      <i class="fas fa-arrow-left text-xl"></i>
-    </button>
-    <input type="text" id="searchInput" placeholder="Search products..." class="flex-1 bg-gray-100 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-gray-800 text-sm">
-    <i class="fas fa-microphone text-gray-400 text-lg"></i>
-  </div>
-
-  <!-- Suggestions Area -->
-  <div class="p-4 flex-1 overflow-y-auto bg-white">
-    <h3 class="text-xs font-bold text-gray-500 mb-4 tracking-wider">POPULAR SUGGESTIONS</h3>
-    <ul class="space-y-4">
-      <li>
-        <a href="#" onclick="applySearch('foil')" class="flex items-center gap-3 text-gray-700 hover:text-teal-600 text-sm">
-          <i class="fas fa-search text-gray-400 text-xs"></i> Aluminum Foil
-        </a>
-      </li>
-      <li>
-        <a href="#" onclick="applySearch('paper bag')" class="flex items-center gap-3 text-gray-700 hover:text-teal-600 text-sm">
-          <i class="fas fa-search text-gray-400 text-xs"></i> Paper Bag
-        </a>
-      </li>
-      <li>
-        <a href="#" onclick="applySearch('spoon')" class="flex items-center gap-3 text-gray-700 hover:text-teal-600 text-sm">
-          <i class="fas fa-search text-gray-400 text-xs"></i> Spoon, Fork & Knife
-        </a>
-      </li>
-      <li>
-        <a href="#" onclick="applySearch('tissue')" class="flex items-center gap-3 text-gray-700 hover:text-teal-600 text-sm">
-          <i class="fas fa-search text-gray-400 text-xs"></i> Tissue & Napkin
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
+      
       <!-- Paper -->
       <div id="paper">
         <h2 class="text-2xl font-bold mb-5 flex items-center gap-2"><i class="fas fa-box text-teal-600"></i> PAPER PRODUCTS</h2>
@@ -328,6 +302,14 @@
             <a href="https://wa.me/9779867187555?text=I%20want%20Paper%20Ice%20Cream%20Cup" class="mt-2 inline-block text-teal-700 text-xs font-medium">Enquire →</a>
         </div>
     </div>
+    <div class="product-card bg-white rounded-xl overflow-hidden border transition">
+    <img src="popcorn-cups.jpg" alt="Popcorn Cups" class="product-img" onerror="this.src='https://placehold.co/300x200/fef3c7/d97706?text=Popcorn+Cups'">
+    <div class="p-4">
+        <h3 class="font-semibold text-sm">Popcorn Cups</h3>
+        <p class="text-xs text-gray-500 mt-1">Paper & Plastic | 32oz / 46oz / 85oz</p>
+        <a href="https://wa.me/9779867187555?text=I%20want%20Popcorn%20Cups" class="mt-2 inline-block text-teal-700 text-xs font-medium">Enquire →</a>
+    </div>
+</div>
      <div class="product-card bg-white rounded-xl overflow-hidden border transition">
         <img src="chicken-bucket.jpg" alt="White Paper Chicken Bucket" class="product-img" onerror="this.src='https://placehold.co/300x200/f8fafc/64748b?text=Chicken+Bucket'">
         <div class="p-4">
@@ -376,6 +358,14 @@
             <a href="https://wa.me/9779867187555?text=I%20want%20Cake%20Box" class="mt-2 inline-block text-teal-700 text-xs font-medium">Enquire →</a>
         </div>
     </div>
+        <div class="product-card bg-white rounded-xl overflow-hidden border transition">
+          <img src="pizza-box.jpg" alt="Pizza Box" class="product-img" onerror="this.src='https://placehold.co/300x200?text=Pizza+Box'">
+          <div class="p-4">
+              <h3 class="font-semibold text-sm">Pizza Box</h3>
+              <p class="text-xs text-gray-500 mt-1">7x7 inch / 9x9 inch / 12x12 inch</p>
+              <a href="https://wa.me/9779867187555?text=I%20want%20Pizza%20Box" class="mt-2 inline-block text-teal-700 text-xs font-medium">Enquire →</a>
+          </div>
+      </div>
     <div class="product-card bg-white rounded-xl overflow-hidden border transition">
         <img src="biodegradable-plate.jpg" alt="Biodegradable Plate" class="product-img" onerror="this.src='https://placehold.co/300x200/f8fafc/64748b?text=Bio+Plate'">
         <div class="p-4">
@@ -645,6 +635,22 @@
             <a href="https://wa.me/9779867187555?text=I%20want%20Cling%20Film%2045cm%205kg%207kg%2010kg" class="mt-2 inline-block text-teal-700 text-xs font-medium">Enquire →</a>
           </div>
         </div>
+              <div class="product-card bg-white rounded-xl overflow-hidden border transition">
+          <img src="bubble-wrap.jpg" alt="Bubble Wrap" class="product-img" onerror="this.src='https://placehold.co/300x200?text=Bubble+Wrap'">
+          <div class="p-4">
+              <h3 class="font-semibold text-sm">Bubble Wrap Roll</h3>
+              <p class="text-xs text-gray-500 mt-1">Protective packaging | 1 Meter width</p>
+              <a href="https://wa.me/9779867187555?text=I%20want%20Bubble%20Wrap" class="mt-2 inline-block text-teal-700 text-xs font-medium">Enquire →</a>
+          </div>
+      </div>
+      <div class="product-card bg-white rounded-xl overflow-hidden border transition">
+          <img src="packing-tape.jpg" alt="Packing Tape" class="product-img" onerror="this.src='https://placehold.co/300x200?text=Packing+Tape'">
+          <div class="p-4">
+              <h3 class="font-semibold text-sm">Brown Packing Tape</h3>
+              <p class="text-xs text-gray-500 mt-1">Heavy duty | 65 Meters</p>
+              <a href="https://wa.me/9779867187555?text=I%20want%20Packing%20Tape" class="mt-2 inline-block text-teal-700 text-xs font-medium">Enquire →</a>
+          </div>
+      </div>
              <div class="product-card bg-white rounded-xl overflow-hidden border transition">
           <img src="stretch-film-carton.jpg" alt="Plastic Stretch Film Carton Wrapping" class="product-img" onerror="this.src='https://placehold.co/300x200/fef3c7/d97706?text=Carton+Wrapping+Film'">
           <div class="p-4">
@@ -681,6 +687,15 @@
             <a href="https://wa.me/9779867187555?text=I%20want%20Non%20Woven%20Carry%20Bags" class="mt-2 inline-block text-teal-700 text-xs font-medium">Enquire →</a>
             </div>
           </div>
+          
+               <div class="product-card bg-white rounded-xl overflow-hidden border transition">
+          <img src="courier-bag.jpg" alt="Courier Bag" class="product-img" onerror="this.src='https://placehold.co/300x200?text=Courier+Bag'">
+          <div class="p-4">
+              <h3 class="font-semibold text-sm">Courier Bags (Poly Mailers)</h3>
+              <p class="text-xs text-gray-500 mt-1">Tamper-proof | 10x12 inch</p>
+              <a href="https://wa.me/9779867187555?text=I%20want%20Courier%20Bags" class="mt-2 inline-block text-teal-700 text-xs font-medium">Enquire →</a>
+          </div>
+      </div>
 
              <div class="product-card bg-white rounded-xl overflow-hidden border transition">
           <img src="garbage-bag-white.jpg" alt="White Garbage Bags" class="product-img" onerror="this.src='https://placehold.co/300x200/fef3c7/d97706?text=White+Garbage+Bags'">
@@ -933,6 +948,135 @@
         
         </div>
         </div>
+        <!-- Hygiene & Cleaning Products Section -->
+<div id="hygiene" class="mt-16 pt-10 border-t border-gray-200">
+  <h2 class="text-2xl font-bold mb-5 flex items-center gap-2 text-slate-700 uppercase">
+    <i class="fas fa-pump-soap text-blue-500"></i> HYGIENE & CLEANING
+  </h2>
+  
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+    
+<!-- 1. Hand Wash -->
+<div class="product-card bg-white rounded-xl overflow-hidden border transition">
+    <img src="handwash.jpg" alt="Hand Wash" class="product-img" onerror="this.src='https://placehold.co/300x200?text=Hand+Wash'">
+    <div class="p-4">
+        <h3 class="font-semibold text-sm">Liquid Hand Wash</h3>
+        <p class="text-xs text-gray-500 mt-1">500ml & 5L Bulk Cans</p>
+        <a href="https://wa.me/9779867187555?text=I%20want%20Hand%20Wash" class="mt-2 inline-block text-teal-700 text-xs font-medium">Enquire →</a>
+    </div>
+</div>
+
+<!-- 2. Dishwash -->
+<div class="product-card bg-white rounded-xl overflow-hidden border transition">
+    <img src="dishwash.jpg" alt="Dishwash" class="product-img" onerror="this.src='https://placehold.co/300x200?text=Dishwash'">
+    <div class="p-4">
+        <h3 class="font-semibold text-sm">Liquid Dishwash</h3>
+        <p class="text-xs text-gray-500 mt-1">Lemon Scent | 500ml & 1L</p>
+        <a href="https://wa.me/9779867187555?text=I%20want%20Dishwash" class="mt-2 inline-block text-teal-700 text-xs font-medium">Enquire →</a>
+    </div>
+</div>
+
+<!-- 3. Floor Cleaner -->
+<div class="product-card bg-white rounded-xl overflow-hidden border transition">
+    <img src="floor-cleaner.jpg" alt="Floor Cleaner" class="product-img" onerror="this.src='https://placehold.co/300x200?text=Floor+Cleaner'">
+    <div class="p-4">
+        <h3 class="font-semibold text-sm">Floor Cleaner / Phenyl</h3>
+        <p class="text-xs text-gray-500 mt-1">White & Floral |500ml/1L</p>
+        <a href="https://wa.me/9779867187555?text=I%20want%20Floor%20Cleaner" class="mt-2 inline-block text-teal-700 text-xs font-medium">Enquire →</a>
+    </div>
+</div>
+
+<!-- 4. Scrub Pads -->
+<div class="product-card bg-white rounded-xl overflow-hidden border transition">
+    <img src="scrub-pads.jpg" alt="Scrub Pads" class="product-img" onerror="this.src='https://placehold.co/300x200?text=Scrub+Pads'">
+    <div class="p-4">
+        <h3 class="font-semibold text-sm">Steel Scrub Pads</h3>
+        <p class="text-xs text-gray-500 mt-1">Heavy Duty | Pack of 6</p>
+        <a href="https://wa.me/9779867187555?text=I%20want%20Scrub%20Pads" class="mt-2 inline-block text-teal-700 text-xs font-medium">Enquire →</a>
+    </div>
+</div>
+
+<!-- 5. Comfort -->
+<div class="product-card bg-white rounded-xl overflow-hidden border transition">
+    <img src="comfort.jpg" alt="Comfort" class="product-img" onerror="this.src='https://placehold.co/300x200?text=Comfort'">
+    <div class="p-4">
+        <h3 class="font-semibold text-sm">Comfort Softener</h3>
+        <p class="text-xs text-gray-500 mt-1">1L / 2L | Assorted Fragrances</p>
+        <a href="https://wa.me/9779867187555?text=I%20want%20Comfort" class="mt-2 inline-block text-teal-700 text-xs font-medium">Enquire →</a>
+    </div>
+</div>
+
+<!-- 6. Detergent Powder -->
+<div class="product-card bg-white rounded-xl overflow-hidden border transition">
+    <img src="detergent.jpg" alt="Detergent" class="product-img" onerror="this.src='https://placehold.co/300x200?text=Detergent'">
+    <div class="p-4">
+        <h3 class="font-semibold text-sm">Detergent Powder</h3>
+        <p class="text-xs text-gray-500 mt-1">Surf, Rin | 1kg & Bulk</p>
+        <a href="https://wa.me/9779867187555?text=I%20want%20Detergent" class="mt-2 inline-block text-teal-700 text-xs font-medium">Enquire →</a>
+    </div>
+</div>
+
+<!-- 7. Soap Bar -->
+<div class="product-card bg-white rounded-xl overflow-hidden border transition">
+    <img src="soap-bar.jpg" alt="Soap" class="product-img" onerror="this.src='https://placehold.co/300x200?text=Soap+Bar'">
+    <div class="p-4">
+        <h3 class="font-semibold text-sm">Washing Soap Bars</h3>
+        <p class="text-xs text-gray-500 mt-1">Lux, Sunlight | Pack of 4</p>
+        <a href="https://wa.me/9779867187555?text=I%20want%20Soap" class="mt-2 inline-block text-teal-700 text-xs font-medium">Enquire →</a>
+    </div>
+</div>
+
+<!-- 8. Toilet Cleaner -->
+<div class="product-card bg-white rounded-xl overflow-hidden border transition">
+    <img src="toilet-cleaner.jpg" alt="Toilet Cleaner" class="product-img" onerror="this.src='https://placehold.co/300x200?text=Toilet+Cleaner'">
+    <div class="p-4">
+        <h3 class="font-semibold text-sm">Toilet Cleaner</h3>
+        <p class="text-xs text-gray-500 mt-1">Harpic style | 500ml & 1L</p>
+        <a href="https://wa.me/9779867187555?text=I%20want%20Toilet%20Cleaner" class="mt-2 inline-block text-teal-700 text-xs font-medium">Enquire →</a>
+    </div>
+</div>
+
+<!-- 9. Glass Cleaner -->
+<div class="product-card bg-white rounded-xl overflow-hidden border transition">
+    <img src="glass-cleaner.jpg" alt="Glass Cleaner" class="product-img" onerror="this.src='https://placehold.co/300x200?text=Glass+Cleaner'">
+    <div class="p-4">
+        <h3 class="font-semibold text-sm">Glass Cleaner</h3>
+        <p class="text-xs text-gray-500 mt-1">Colin style | 500ml Spray</p>
+        <a href="https://wa.me/9779867187555?text=I%20want%20Glass%20Cleaner" class="mt-2 inline-block text-teal-700 text-xs font-medium">Enquire →</a>
+    </div>
+</div>
+
+<!-- 10. Broom Mop -->
+<div class="product-card bg-white rounded-xl overflow-hidden border transition">
+    <img src="broom-mop.jpg" alt="Broom & Mop" class="product-img" onerror="this.src='https://placehold.co/300x200?text=Broom+%26+Mop'">
+    <div class="p-4">
+        <h3 class="font-semibold text-sm">Brooms & Mops</h3>
+        <p class="text-xs text-gray-500 mt-1">Plastic Kucho & Cotton Mops</p>
+        <a href="https://wa.me/9779867187555?text=I%20want%20Broom" class="mt-2 inline-block text-teal-700 text-xs font-medium">Enquire →</a>
+    </div>
+</div>
+
+<!-- 11. Room Freshener -->
+<div class="product-card bg-white rounded-xl overflow-hidden border transition">
+    <img src="room-freshener.jpg" alt="Room Freshener" class="product-img" onerror="this.src='https://placehold.co/300x200?text=Room+Freshener'">
+    <div class="p-4">
+        <h3 class="font-semibold text-sm">Room Freshener</h3>
+        <p class="text-xs text-gray-500 mt-1">Sprays & Refills | Assorted scents</p>
+        <a href="https://wa.me/9779867187555?text=I%20want%20Room%20Freshener" class="mt-2 inline-block text-teal-700 text-xs font-medium">Enquire →</a>
+    </div>
+</div>
+
+<!-- 12. Kitchen Sponge -->
+<div class="product-card bg-white rounded-xl overflow-hidden border transition">
+    <img src="kitchen-sponge.jpg" alt="Kitchen Sponge" class="product-img" onerror="this.src='https://placehold.co/300x200?text=Kitchen+Sponge'">
+    <div class="p-4">
+        <h3 class="font-semibold text-sm">Kitchen Sponge</h3>
+        <p class="text-xs text-gray-500 mt-1">Heavy Duty | Pack of 3</p>
+        <a href="https://wa.me/9779867187555?text=I%20want%20Sponge" class="mt-2 inline-block text-teal-700 text-xs font-medium">Enquire →</a>
+    </div>
+</div>
+</div>
+</div>
 
 
       <!-- CTA -->
@@ -1000,10 +1144,6 @@
     <i class="fas fa-home text-lg"></i>
     <span class="text-[10px] font-medium mt-1">Home</span>
   </a>
-  <a href="#" onclick="toggleSearch()" class="flex flex-col items-center text-gray-500 hover:text-teal-600">
-    <i class="fas fa-search text-lg"></i>
-    <span class="text-[10px] font-medium mt-1">Search</span>
-  </a>
   <a href="#paper" class="flex flex-col items-center text-gray-500 hover:text-teal-600">
     <i class="fas fa-box-open text-lg"></i>
     <span class="text-[10px] font-medium mt-1">Catalog</span>
@@ -1037,73 +1177,6 @@
         slides[currentSlide].classList.remove('opacity-0', 'z-0');
         slides[currentSlide].classList.add('opacity-100', 'z-10');
       }, 3000); // Changes slide every 3 seconds (3000ms)
-    }
-  });
-</script>
-<script>
-  // 1. Toggle the full screen overlay
-  function toggleSearch() {
-    const overlay = document.getElementById('searchOverlay');
-    const searchInput = document.getElementById('searchInput');
-    
-    if (overlay) {
-      // If it's already open, close it
-      if (overlay.style.display === 'flex') {
-        overlay.style.display = 'none';
-      } else {
-        // Open it and RESET the search
-        overlay.style.display = 'flex';
-        if (searchInput) {
-          searchInput.value = ''; // Clear old search
-          searchInput.dispatchEvent(new Event('input')); // Show all products again
-          searchInput.focus();
-        }
-      }
-    }
-  }
-
-  // 2. Apply search from a suggestion click
-  function applySearch(term) {
-    const searchInput = document.getElementById('searchInput');
-    const overlay = document.getElementById('searchOverlay');
-    
-    if (searchInput && overlay) {
-      searchInput.value = term;
-      searchInput.dispatchEvent(new Event('input')); // Filter products
-      overlay.style.display = 'none'; // Close overlay so you see results
-    }
-  }
-
-  // 3. Filter products as the user types
-  document.addEventListener('DOMContentLoaded', () => {
-    const searchInput = document.getElementById('searchInput');
-    
-    if (searchInput) {
-      searchInput.addEventListener('input', (e) => {
-        const searchTerm = e.target.value.toLowerCase().trim();
-        const sections = document.querySelectorAll('section > div > div[id]');
-        
-        sections.forEach(section => {
-          if (section.id === 'searchOverlay') return;
-          
-          const cards = section.querySelectorAll('.product-card');
-          let hasVisibleCard = false;
-          
-          cards.forEach(card => {
-            const title = card.querySelector('h3') ? card.querySelector('h3').textContent.toLowerCase() : '';
-            const desc = card.querySelector('p') ? card.querySelector('p').textContent.toLowerCase() : '';
-            
-            if (title.includes(searchTerm) || desc.includes(searchTerm)) {
-              card.style.display = ''; 
-              hasVisibleCard = true;
-            } else {
-              card.style.display = 'none'; 
-            }
-          });
-          
-          section.style.display = hasVisibleCard ? 'block' : 'none';
-        });
-      });
     }
   });
 </script>
