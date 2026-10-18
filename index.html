@@ -37,23 +37,31 @@
     </div>
   </div>
 
-  <!-- Navigation -->
+    <!-- Nav -->
   <nav class="bg-white shadow-sm sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex justify-between items-center h-16">
-        <a href="index.html" class="flex items-center gap-2">
-          <img src="newlogo.png" alt="Sushko Logo" class="h-10 w-auto rounded-lg p-1">
-          <div>
-            <div class="font-bold text-lg text-amber-200 leading-ti
-            <div class="text-xs text-gray-200 -mt-0.5">Packaging Solutions</div>
-          </div>
-        </a>
+        <!-- Logo + Search Group -->
+<div class="flex items-center gap-2">
+  <a href="index.html" class="flex items-center gap-3">
+  <!-- Made logo slightly larger and added a subtle shadow -->
+  <img src="newlogo.png" alt="Sushko Logo" class="h-12 w-auto rounded-lg drop-shadow-sm">
+  <div>
+    <!-- Made text larger, bolder, and used a brighter blue-grey. Added gold for PACKAGING to match logo -->
+    <div class="font-extrabold text-xl text-slate-800 leading-tight">
+      SUSHKO <span class="text-[#C5A47E]">PACKAGING</span>
+    </div>
+    <div class="text-xs text-slate-500 mt-0.5">Packaging Solutions</div>
+  </div>
+</a>
+  </button>
+</div>
         <div class="hidden md:flex items-center gap-8">
-          <a href="index.html" class="font-medium text-teal-700 hover:text-teal-900" data-en="Home" data-ne="होम">Home</a>
-          <a href="products.html" class="font-medium text-gray-600 hover:text-teal-700" data-en="Products" data-ne="उत्पादनहरू">Products</a>
-          <a href="about.html" class="font-medium text-gray-600 hover:text-teal-700" data-en="About Us" data-ne="हाम्रो बारे">About Us</a>
-          <a href="contact.html" class="font-medium text-gray-600 hover:text-teal-700" data-en="Contact" data-ne="सम्पर्क">Contact</a>
-          <a href="contact.html" class="bg-teal-700 text-white px-5 py-2 rounded-lg font-medium hover:bg-teal-800 transition" data-en="Order Now" data-ne="अर्डर गर्नुहोस्">Order Now</a>
+          <a href="index.html" class="font-medium text-gray-600 hover:text-teal-700">Home</a>
+          <a href="products.html" class="font-medium text-teal-700">Products</a>
+          <a href="about.html" class="font-medium text-gray-600 hover:text-teal-700">About Us</a>
+          <a href="contact.html" class="font-medium text-gray-600 hover:text-teal-700">Contact</a>
+          <a href="contact.html" class="bg-teal-700 text-white px-5 py-2 rounded-lg font-medium">Order Now</a>
         </div>
         <button class="md:hidden text-2xl" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
           <i class="fas fa-bars"></i>
